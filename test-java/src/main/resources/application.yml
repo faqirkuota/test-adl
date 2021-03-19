@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /interview
+spring:
+  profiles:
+    active: dev
+  jpa:
+    database: POSTGRESQL
+    #    hibernate:
+    #      ddl-auto: update
+    #      generate-ddl: true
+    show-sql: true
+  datasource:
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
+      schema: public
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/interview_adl
+    username: postgres
+    password: FSLgaming213
+    driverClassName: org.postgresql.Driver
+
+service.resource.secured-pattern: "" #secure none
+service.oauth-bearer-token-as-basic-auth: true  # api server access with authentication
